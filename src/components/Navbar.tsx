@@ -93,7 +93,7 @@ export default function Navbar() {
                 overflow: "hidden",
               }}
             >
-              <Image src="/logo.png" alt="Atharva Jhawar" width={36} height={36} style={{ borderRadius: 6, objectFit: "contain" }} />
+              <Image src={process.env.NODE_ENV === "production" ? "/Portfolio/logo.png" : "/logo.png"} alt="Atharva Jhawar" width={36} height={36} style={{ borderRadius: 6, objectFit: "contain" }} />
             </motion.div>
           </Link>
 

@@ -45,7 +45,7 @@ export default function Hero() {
       >
         {/* Logo */}
         <motion.div variants={item} style={{ marginBottom: 24, display: "flex", justifyContent: "center" }}>
-          <Image src="/logo.png" alt="Atharva Jhawar Logo" width={120} height={120} style={{ borderRadius: 20, objectFit: "contain", filter: "drop-shadow(0 0 24px rgba(0,212,255,0.2))" }} />
+          <Image src={process.env.NODE_ENV === "production" ? "/Portfolio/logo.png" : "/logo.png"} alt="Atharva Jhawar Logo" width={120} height={120} style={{ borderRadius: 20, objectFit: "contain", filter: "drop-shadow(0 0 24px rgba(0,212,255,0.2))" }} />
         </motion.div>
 
         {/* Status */}

@@ -53,7 +53,7 @@ export default function ResumePage() {
               <a href="https://linkedin.com/in/atharvajhawarcareergpt" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 14px", borderRadius: 8, border: "1px solid #27272a", color: "#a1a1aa", fontSize: 13, textDecoration: "none" }}>
                 <FaLinkedin size={14} /> LinkedIn
               </a>
-              <a href="/Atharva_Jhawar_Resume.pdf" target="_blank" style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 14px", borderRadius: 8, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
+              <a href={process.env.NODE_ENV === "production" ? "/Portfolio/Atharva_Jhawar_Resume.pdf" : "/Atharva_Jhawar_Resume.pdf"} target="_blank" style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 14px", borderRadius: 8, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontSize: 13, fontWeight: 600, textDecoration: "none" }}>
                 <FaDownload size={12} /> Download PDF
               </a>
             </div>
@@ -147,7 +147,7 @@ export default function ResumePage() {
             style={{ textAlign: "center", padding: 32, borderRadius: 20, background: "linear-gradient(135deg, rgba(0,212,255,0.06), rgba(124,58,237,0.04))", border: "1px solid rgba(0,212,255,0.15)" }}
           >
             <p style={{ fontSize: 16, color: "#e4e4e7", fontWeight: 600, marginBottom: 12 }}>Want the full details?</p>
-            <a href="/Atharva_Jhawar_Resume.pdf" target="_blank" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", borderRadius: 10, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontWeight: 600, fontSize: 14, textDecoration: "none" }}>
+            <a href={process.env.NODE_ENV === "production" ? "/Portfolio/Atharva_Jhawar_Resume.pdf" : "/Atharva_Jhawar_Resume.pdf"} target="_blank" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", borderRadius: 10, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontWeight: 600, fontSize: 14, textDecoration: "none" }}>
               <FaDownload size={14} /> Download Resume PDF
             </a>
           </motion.div>

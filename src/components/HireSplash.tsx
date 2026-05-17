@@ -302,7 +302,7 @@ export default function HireSplash({ onComplete }: { onComplete: () => void }) {
               {phase === "powerup" ? (
                 <span style={{ fontSize: 64 }}>⚡</span>
               ) : (
-                <Image src="/logo.png" alt="AJ Logo" width={100} height={100} style={{ borderRadius: 16, objectFit: "contain", filter: "drop-shadow(0 0 20px rgba(0,212,255,0.3))" }} />
+                <Image src={process.env.NODE_ENV === "production" ? "/Portfolio/logo.png" : "/logo.png"} alt="AJ Logo" width={100} height={100} style={{ borderRadius: 16, objectFit: "contain", filter: "drop-shadow(0 0 20px rgba(0,212,255,0.3))" }} />
               )}
             </motion.div>
 

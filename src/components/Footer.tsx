@@ -28,7 +28,7 @@ export default function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 40, marginBottom: 48 }}>
           {/* Brand */}
           <div>
-            <Image src="/logo.png" alt="Atharva Jhawar" width={60} height={60} style={{ borderRadius: 10, objectFit: "contain", marginBottom: 12 }} />
+            <Image src={process.env.NODE_ENV === "production" ? "/Portfolio/logo.png" : "/logo.png"} alt="Atharva Jhawar" width={60} height={60} style={{ borderRadius: 10, objectFit: "contain", marginBottom: 12 }} />
             <p style={{ fontSize: 14, color: "#a1a1aa", lineHeight: 1.7, maxWidth: 280 }}>
               Software Developer building scalable apps with React, Node.js, Python & Blockchain tech.
             </p>

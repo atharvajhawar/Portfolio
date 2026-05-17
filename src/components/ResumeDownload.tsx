@@ -98,7 +98,7 @@ export default function ResumeDownload() {
           </motion.p>
 
           <motion.a
-            href="/Atharva_Jhawar_Resume.pdf"
+            href={process.env.NODE_ENV === "production" ? "/Portfolio/Atharva_Jhawar_Resume.pdf" : "/Atharva_Jhawar_Resume.pdf"}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 10 }}
