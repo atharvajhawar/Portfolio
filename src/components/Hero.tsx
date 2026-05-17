@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 import { HiArrowDown } from "react-icons/hi";
 
 const socials = [
@@ -101,22 +102,24 @@ export default function Hero() {
 
         {/* CTA */}
         <motion.div variants={item} style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
-          <motion.a
-            href="/projects"
-            whileHover={{ scale: 1.05, boxShadow: "0 8px 30px rgba(0,212,255,0.3)" }}
-            whileTap={{ scale: 0.97 }}
-            style={{ padding: "12px 32px", borderRadius: 999, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontWeight: 600, fontSize: 14, textDecoration: "none" }}
-          >
-            View My Work
-          </motion.a>
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.05, borderColor: "rgba(0,212,255,0.5)" }}
-            whileTap={{ scale: 0.97 }}
-            style={{ padding: "12px 32px", borderRadius: 999, border: "1px solid #27272a", color: "#e4e4e7", fontWeight: 500, fontSize: 14, textDecoration: "none", transition: "all 0.3s" }}
-          >
-            Get In Touch
-          </motion.a>
+          <Link href="/projects" style={{ textDecoration: "none" }}>
+            <motion.span
+              whileHover={{ scale: 1.05, boxShadow: "0 8px 30px rgba(0,212,255,0.3)" }}
+              whileTap={{ scale: 0.97 }}
+              style={{ display: "inline-block", padding: "12px 32px", borderRadius: 999, background: "linear-gradient(135deg, #00d4ff, #7c3aed)", color: "white", fontWeight: 600, fontSize: 14, cursor: "pointer" }}
+            >
+              View My Work
+            </motion.span>
+          </Link>
+          <Link href="/contact" style={{ textDecoration: "none" }}>
+            <motion.span
+              whileHover={{ scale: 1.05, borderColor: "rgba(0,212,255,0.5)" }}
+              whileTap={{ scale: 0.97 }}
+              style={{ display: "inline-block", padding: "12px 32px", borderRadius: 999, border: "1px solid #27272a", color: "#e4e4e7", fontWeight: 500, fontSize: 14, cursor: "pointer", transition: "all 0.3s" }}
+            >
+              Get In Touch
+            </motion.span>
+          </Link>
         </motion.div>
       </motion.div>
 
