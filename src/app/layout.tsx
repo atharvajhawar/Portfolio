@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ParticleBackground from "@/components/ParticleBackground";
 import FloatingIcons from "@/components/FloatingIcons";
 import AppWrapper from "@/components/AppWrapper";
+import CameraBackground from "@/components/CameraBackground";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} antialiased`}>
       <body className="min-h-screen flex flex-col noise">
         <AppWrapper>
+          <CameraBackground />
           <ParticleBackground />
           <FloatingIcons />
           <Navbar />
