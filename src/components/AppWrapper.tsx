@@ -4,20 +4,20 @@ import { useState, useEffect } from "react";
 import HireSplash from "./HireSplash";
 
 export default function AppWrapper({ children }: { children: React.ReactNode }) {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(false);
   const [hasChecked, setHasChecked] = useState(false);
 
   useEffect(() => {
-    // Only show splash once per session
-    const seen = sessionStorage.getItem("splash_seen");
-    if (seen) {
-      setShowSplash(false);
+    // Only show splash once ever (persists across reloads/sessions)
+    const seen = localStorage.getItem("portfolio_splash_seen");
+    if (!seen) {
+      setShowSplash(true);
     }
     setHasChecked(true);
   }, []);
 
   const handleComplete = () => {
-    sessionStorage.setItem("splash_seen", "1");
+    localStorage.setItem("portfolio_splash_seen", "1");
     setShowSplash(false);
   };
 
